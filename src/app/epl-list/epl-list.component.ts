@@ -24,7 +24,7 @@ export class EplListComponent implements OnInit {
   // Reload data bằng cách gán giá trị mảng của employees thông 
   // qua function getEmployeesList() trong EmployeeService.
   reloadData(){
-    //this.employees = this.employeeService.getEmployeesList();
+    this.employees = this.employeeService.getEmployeesList();
   }
   
   //

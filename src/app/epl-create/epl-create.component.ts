@@ -2,6 +2,8 @@ import { Router } from '@angular/router';
 import { EmployeeService } from './../employee.service';
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-epl-create',
@@ -11,7 +13,6 @@ import { Employee } from '../employee';
 export class EplCreateComponent implements OnInit {
 
   employee : Employee = new Employee ();
-  ///sdfladfkalsva;dnva;sdnva;nva;nva
   submitted = false;
 
   constructor(private employeeService : EmployeeService,

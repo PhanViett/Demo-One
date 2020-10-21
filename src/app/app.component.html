@@ -1,40 +1,62 @@
 <style>
-  nav.navbar {
+  div.navbar{
     background-color: black;
+    height: 60px;
+    font-size: x-large;
   }
 
-  div.container {
+  ul{
+    list-style-type: none; 
+    padding: 0;
+  }
+
+  li{
+    list-style: none;
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+    
+
+  section.content-1 {
+    margin-left: 22%;
     margin-top: 50px;
   }
 
+  div.card{
+    width: 900px;
+  }
+
+  nav button{
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 2px;
+  }
 
 </style>
 
-<nav id = "navbar" class="navbar navbar-expand-sm fixed-top navbar-dark">
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li>
-        <a class="navbar-brand" routerLink="employees" routerLinkActive="active">FPT System</a>
-    </li>
-    <li class="nav-item">
-        <a routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
-    </li>
-    <li class="nav-item">
-        <a routerLink="add" class="nav-link" routerLinkActive="active">Add Employee</a>
-    </li>
-  </ul>
+<div class="navbar">
+  <nav id = "navbar" class="navbar  fixed-top navbar-dark">
+          <a class="navbar-brand" routerLink="employees" routerLinkActive="active" style="margin-left: 15px;">FPT System</a>
+          <button class="btn btn-outline-light" style="margin-right: 10px;">Login</button>
+  </nav>
+</div>
 
-</nav>
-<div class="container">
-  <br>
-  <h2 style="text-align: center;">{{title}}</h2>
-  <hr>  
-  <div class="card">
-    <div class="card-body">
-  <router-outlet></router-outlet>
+
+<section class="content-1">
+  <div class="content-1">
+    <br>
+    <br>
+    <div class="card">
+      <div class="card-body">
+    <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
 
 <footer class="footer">
   <div class="container">

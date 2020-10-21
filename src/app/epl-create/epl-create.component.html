@@ -1,27 +1,53 @@
-<h3>Create Employee</h3>
-<div [hidden]="submitted" style="width: 400px;">
+<style>
+#submitbtn{
+  float: right;
+  margin-right: 25px;
+  width: 100px;
+
+}
+
+#back{
+  margin-right: 25px;
+  float: right;
+  width: 100px;
+}
+
+#gender{
+  margin-left: 40px;
+}
+</style>
+
+
+<h3 style="text-align: center;">Create Employee</h3>
+<div [hidden]="submitted" style="width: 800px; margin-left: 32px;">
+
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name :</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="name">
-    </div>
-
-    <div class="form-group">
-      <label for="name">Gender : </label>
-      <input type="text" class="form-control" id="gender" required [(ngModel)]="employee.gender" name="gender">
-    </div>
-
-    <div class="form-group">
-      <label for="name">Position : </label>
-      <input type="text" class="form-control" id="position" required [(ngModel)]="employee.position" name="position">
+      <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="name" placeholder="Enter Name">
     </div>
 
     <div class="form-group">
       <label for="name">Email : </label>
-      <input type="text" class="form-control" id="email" required [(ngModel)]="employee.email" name="email">
+      <input type="text" class="form-control" id="email" required [(ngModel)]="employee.email" name="email" placeholder="Email">
     </div>
 
-    <button type="submit" class="btn btn-success">Submit</button>
+    <div class="form-group">
+      <label for="name">Position : </label>
+      <input type="text" class="form-control" id="position" required [(ngModel)]="employee.position" name="position" placeholder="Position">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Gender : </label>
+      <input id="gender" type="radio" value="Male" required [(ngModel)]="employee.gender" name="gender">  Male
+      <input id="gender" type="radio" value="Female"required [(ngModel)]="employee.gender" name="gender"> Female
+    </div>
+
+    <a routerLink='/employees' routerLinkActive="active"><button class="btn btn-outline-dark" id="back" > Back </button></a> 
+
+    <button id="submitbtn" type="submit" class="btn btn-success">Submit</button>            
+
+   
   </form>
 </div>
 

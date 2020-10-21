@@ -8,6 +8,7 @@ import { EplListComponent } from './epl-list/epl-list.component';
 import { EplDetailsComponent } from './epl-details/epl-details.component';
 import { EplCreateComponent } from './epl-create/epl-create.component';
 import { EplUpdateComponent } from './epl-update/epl-update.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EplUpdateComponent } from './epl-update/epl-update.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
